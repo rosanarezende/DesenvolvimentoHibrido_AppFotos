@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/fotos1.jpg"></ion-img>
+
+    <ion-card-header>
+      <ion-card-subtitle>Bem Vindo!</ion-card-subtitle>
+      <ion-card-title><b>APP FOTOS</b></ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <p>Realize login abaixo.</p>
+      <p></p>
+
+      <ion-item >
+      <!-- <ion-label>Usuário</ion-label> -->
+        <ion-input name="usuario" placeholder="Usuário"></ion-input>
+      </ion-item>
+      <ion-item>
+      <!-- <ion-label position="floating">Senha</ion-label> -->
+        <ion-input name="senha" type="password" placeholder="Senha"></ion-input>
+      </ion-item>
+      <br>
+      <!-- <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="primary" style="padding-bottom: 8px"> -->
+      <!-- <ion-button expand="block" color="primary" style="padding-bottom: 8px" routerLink="/tabs" routerDirection="tabs">
+      
+      Para gerenciar a autenticação-->
+      <ion-button expand="block" color="primary" style="padding-bottom: 8px" (click)="realizarLoginReal()">
+        Login
+      </ion-button>
+
+      <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="primary" style="padding-bottom: 8px">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Facebook
+      </ion-button>
+
+      <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="danger" style="padding-bottom: 8px">
+        <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+        Google
+      </ion-button>
+
+      <br>
+      <p>Não é usuário?</p>
+      <p>Faça seu cadastro e aproveite!</p>
+      
+      <ion-button expand="block" (click)="realizarCadastro()" routerLink="/cadastro" color="secondary" style="padding-bottom: 8px">
+        Cadastre-se!
+      </ion-button>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
