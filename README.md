@@ -4,6 +4,10 @@ Curso de Desenvolvimento Híbrido com Ionic - prof. Otávio Lube dos Santos - Wi
 
 ## Objetivo
 Desenvolver um aplicativo que captura fotos, que podem ser visualizadas (com descrição) na galeria e no mapa.
+O app, portanto, permitirá:
+- tirar fotos com a funcionalidade de geoposicionamento acoplada;
+- inserir comentários nas fotos;
+- visualizar as fotos tiradas e os comentários nelas inseridas.
 
 
 ## Requisitos
