@@ -10,12 +10,9 @@ export class Tab1Page {
 
   constructor() { 
     
-    this.title = "CÂMERA"
+    this.title = "EVENTOS"
     
    }
 
-  fotografar(){
-    console.log("Tirando foto")
-  }
 
 }

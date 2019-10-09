@@ -1,85 +1,100 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>{{title}}</ion-title>
+    <ion-toolbar>
+      <ion-title>{{title}}</ion-title>
+  
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content class="ion-padding">
+  
+    <!-- <form onsubmit="processForm(event)"> -->
+  
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+  
+      <!-- <br>
+      <ion-item>
+        <ion-label position="stacked">Nome Completo<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" name="nome"></ion-input>
+        **<ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item> -->
+  
 
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
+      <ion-item >
+        <ion-label>Email</ion-label>
+        <ion-input name="email" [(ngModel)]="userCadastro.email"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input name="password" type="password" [(ngModel)]="userCadastro.password"></ion-input>
+      </ion-item>
 
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
-
-  <!-- <form onsubmit="processForm(event)"> -->
-
-  <ion-list lines="full" class="ion-no-margin ion-no-padding">
-
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Nome Completo<ion-text color="danger">*</ion-text>
-      </ion-label>
-      <ion-input required type="text"></ion-input>
-      <!-- <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input> -->
-    </ion-item>
-
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Email<ion-text color="danger">*</ion-text>
-      </ion-label>
-      <ion-input required type="email"></ion-input>
-      <!-- <ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input> -->
-    </ion-item>
+      <!-- <br>
+      <ion-item>
+        <ion-label position="stacked">Email<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="email" name="email" [(ngModel)]="userCadastro.email")></ion-input>
+        **<ion-input required type="text" oninput="handleLastNameValue(event)"></ion-input>
+      </ion-item> -->
+  
+  
+      <!-- <br>
+      <ion-item>
+        <ion-label position="stacked">Criar nome de usuário<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="text" name="usuario"></ion-input>
+        ** <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input>
+      </ion-item> -->
+  
 
 
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Criar nome de usuário<ion-text color="danger">*</ion-text>
-      </ion-label>
-      <ion-input required type="text"></ion-input>
-      <!-- <ion-input required type="text" oninput="handleFirstNameValue(event)"></ion-input> -->
-    </ion-item>
+      <!-- <br>
+      <ion-item>
+        <ion-label position="stacked">Criar senha<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="password" name="password" [(ngModel)]="userCadastro.password"></ion-input>
+      </ion-item> -->
+  
 
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Criar senha<ion-text color="danger">*</ion-text>
-      </ion-label>
-      <ion-input required type="password"></ion-input>
-    </ion-item>
 
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Confirme sua senha<ion-text color="danger">*</ion-text>
-      </ion-label>
-      <ion-input required type="password"></ion-input>
-    </ion-item>
-
-    <br>
-    <ion-item>
-      <ion-label position="stacked">Endereço</ion-label>
-      <ion-input placeholder="Endereço"></ion-input>
-      <ion-input placeholder="Cidade"></ion-input>
-      <ion-input placeholder="Estado"></ion-input>
-      <ion-input placeholder="CEP"></ion-input>
-    </ion-item>
-
-  </ion-list>
-
-  <div class="ion-padding">
-    <ion-button expand="block" type="submit" class="ion-no-margin" (click)="criarUsuario()" routerLink="">Criar conta de
-      usuário</ion-button>
-  </div>
-
-  <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="primary" style="padding-bottom: 8px">
-    <ion-icon slot="start" name="logo-facebook"></ion-icon>
-    Cadastrar com Facebook
-  </ion-button>
-
-  <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="danger" style="padding-bottom: 8px">
-    <ion-icon slot="start" name="logo-googleplus"></ion-icon>
-    Cadastrar no Google
-  </ion-button>
-
-  <!-- </form> -->
-
-</ion-content>
+      <!-- <br>
+      <ion-item>
+        <ion-label position="stacked">Confirme sua senha<ion-text color="danger">*</ion-text>
+        </ion-label>
+        <ion-input required type="password" name="senha"></ion-input>
+      </ion-item>
+  
+      <br>
+      <ion-item>
+        <ion-label position="stacked">Endereço</ion-label>
+        <ion-input placeholder="Endereço"></ion-input>
+        <ion-input placeholder="Cidade"></ion-input>
+        <ion-input placeholder="Estado"></ion-input>
+        <ion-input placeholder="CEP"></ion-input>
+      </ion-item> -->
+  
+    </ion-list>
+  
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin" (click)="realizarCadastro()" routerLink="">Criar conta de
+        usuário</ion-button>
+    </div>
+  
+    <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="primary" style="padding-bottom: 8px">
+      <ion-icon slot="start" name="logo-facebook"></ion-icon>
+      Cadastrar com Facebook
+    </ion-button>
+  
+    <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="danger" style="padding-bottom: 8px">
+      <ion-icon slot="start" name="logo-googleplus"></ion-icon>
+      Cadastrar no Google
+    </ion-button>
+  
+    <!-- </form> -->
+  
+  </ion-content>

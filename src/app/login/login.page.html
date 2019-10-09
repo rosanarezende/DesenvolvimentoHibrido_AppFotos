@@ -6,11 +6,11 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content class="ion-padding">
 
   <ion-card class="welcome-card">
-    <ion-img src="/assets/fotos1.jpg"></ion-img>
+    
+    <ion-img [src]="caminho"></ion-img>
 
     <ion-card-header>
       <ion-card-subtitle>Bem Vindo!</ion-card-subtitle>
@@ -27,8 +27,20 @@
       </ion-item>
       <ion-item>
       <!-- <ion-label position="floating">Senha</ion-label> -->
-        <ion-input name="senha" type="password" placeholder="Senha"></ion-input>
+        <ion-input name="senha" type="password" placeholder="Senha" [(ngModel)]="password"></ion-input>
       </ion-item>
+      
+      <!-- <br>
+      binding .... Por exemplo, consigo pegar em tempo real pegar as informações da senha
+      <ion-item>{{password}}</ion-item>
+      Exemplo... se quero q um gráfico mude em tempo real na minha tela... se estou monitorando um gráfico 
+      https://www.youtube.com/watch?v=rlVxG2lG1Tk&list=PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G&index=10
+      -->
+
+      <br>
+      <ion-text class="ion-text-right">
+        <p>Esqueceu a <a [routerLink]="['/cadastro']" routerDirection="forward" >senha</a>?</p>
+      </ion-text>
       <br>
       <!-- <ion-button expand="block" (click)="realizarLogin()" routerLink="/tabs" color="primary" style="padding-bottom: 8px"> -->
       <!-- <ion-button expand="block" color="primary" style="padding-bottom: 8px" routerLink="/tabs" routerDirection="tabs">
@@ -47,16 +59,17 @@
         <ion-icon slot="start" name="logo-googleplus"></ion-icon>
         Google
       </ion-button>
-
+    
       <br>
       <p>Não é usuário?</p>
       <p>Faça seu cadastro e aproveite!</p>
       
-      <ion-button expand="block" (click)="realizarCadastro()" routerLink="/cadastro" color="secondary" style="padding-bottom: 8px">
+      <ion-button expand="block" (click)="realizarCadastro()" routerLink="/cadastro" routerDirection="forward" color="secondary" style="padding-bottom: 8px">
         Cadastre-se!
       </ion-button>
 
     </ion-card-content>
+
 
   </ion-card>
 

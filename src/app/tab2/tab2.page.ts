@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  title: String;
+
+  constructor() { 
+    
+    this.title = "CÂMERA"
+    
+   }
+
+  fotografar(){
+    console.log("Tirando foto")
+  }
 
 }
