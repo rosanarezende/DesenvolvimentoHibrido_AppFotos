@@ -44,7 +44,7 @@ export class CadastroPage implements OnInit {
     try{
       let user = await this.authService.cadastro(this.userCadastro);
       if(user){
-        this.router.navigate(["tabs"]); // me perdi - tem q chamar um private
+        this.router.navigate(["tabs"]);
       }
     }catch(error){
       console.log(error);
