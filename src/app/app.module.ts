@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-//meus imports
+// Meus imports
 import { environment } from "../environments/environment";
 import { AngularFireModule } from "@angular/fire"; // serve pra eu fazer a ligação do projeto do Ionic com Firebase 
 import { AngularFireAuthModule } from "@angular/fire/auth"; // api pra usar as funções de autenticação do Firebase
@@ -31,4 +31,5 @@ import { AngularFireAuthModule } from "@angular/fire/auth"; // api pra usar as f
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule {}
