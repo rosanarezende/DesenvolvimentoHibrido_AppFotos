@@ -9,20 +9,25 @@ export class AuthService {
 
   constructor(private afa: AngularFireAuth) { }
 
-  cadastro(usuario:User){
-      return this.afa.auth.createUserWithEmailAndPassword(usuario.email, usuario.password) // essa função retorna uma promisse, e preciso tratar isso
+  // cadastro(usuario:User){
+  //     return this.afa.auth.createUserWithEmailAndPassword(usuario.email, usuario.password) // essa função retorna uma promisse, e preciso tratar isso
+  // }
+
+  register(user: User){
+    return this.afa.auth.createUserWithEmailAndPassword(user.email, 
+      user.password);
   }
 
-  login(){
-
+  login(user: User){
+    return this.afa.auth.signInWithEmailAndPassword(user.email, user.password);
   }
 
   logout(){
-
+    return this.afa.auth.signOut();
   }
 
-  getauth(){
-
+  getAuth(){
+    return this.afa.auth;
   }
 
 }

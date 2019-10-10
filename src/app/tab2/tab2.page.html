@@ -7,14 +7,28 @@
       <ion-title>{{title}}</ion-title>
     </ion-toolbar>
   </ion-header>
-  
+
+
   <ion-content>
   
+    <!-- MINHA VERSÃO
     <ion-fab vertical="center" horizontal="center" slot="fixed">
       <ion-fab-button (click)="fotografar()">
         <ion-icon name="camera"></ion-icon>
       </ion-fab-button>
-    </ion-fab>
+    </ion-fab> -->
+
+  
+      <img [src]="photo">
+    
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+        <ion-fab-button (click)="takePicture()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    
+
+    
   
     <!-- 
     <ion-card class="welcome-card">
@@ -53,4 +67,9 @@
       </ion-list>
   -->
   
+
   </ion-content>
+
+
+
+

@@ -1,5 +1,6 @@
 <ion-header>
     <ion-toolbar>
+
       <ion-title>{{title}}</ion-title>
   
       <ion-buttons slot="start">
@@ -25,13 +26,13 @@
   
 
       <ion-item >
-        <ion-label>Email</ion-label>
-        <ion-input name="email" [(ngModel)]="userCadastro.email"></ion-input>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input name="email" [(ngModel)]="userRegister.email"></ion-input>
       </ion-item>
       
       <ion-item>
         <ion-label position="floating">Senha</ion-label>
-        <ion-input name="password" type="password" [(ngModel)]="userCadastro.password"></ion-input>
+        <ion-input name="password" type="password" [(ngModel)]="userRegister.password"></ion-input>
       </ion-item>
 
       <!-- <br>
@@ -81,7 +82,7 @@
     </ion-list>
   
     <div class="ion-padding">
-      <ion-button expand="block" type="submit" class="ion-no-margin" (click)="realizarCadastro()" routerLink="">Criar conta de
+      <ion-button expand="block" type="submit" class="ion-no-margin" (click)="realizarCadastro()">Criar conta de
         usuário</ion-button>
     </div>
   
